@@ -1,0 +1,34 @@
+.upload-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    padding: 20px; /* Añade algo de padding para que no esté pegado a los bordes */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px; /* Limita el ancho máximo del formulario */
+    padding: 20px; /* Añade padding para espacio interno */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+    background-color: #fff; /* Fondo blanco para el formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para darle algo de profundidad */
+}
+
+input, textarea {
+    width: 100%; /* Haz que los inputs y textarea ocupen todo el ancho del formulario */
+    max-width: 400px; /* Limita el ancho máximo */
+    padding: 10px 15px; /* Ajusta el padding para un mejor diseño */
+    margin: 10px 0; /* Espacio entre los elementos del formulario */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+    border: 1px solid #ccc; /* Bordes de los inputs */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente relativo */
+}
