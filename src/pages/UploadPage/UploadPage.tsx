@@ -20,7 +20,7 @@ const UploadPage: React.FC = () => {
         };
 
         try {
-            await axios.post('http://localhost:5000/api/posts', newPost);
+            await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/posts`, newPost);
             setTitle('');
             setDescription('');
             setImage(null);

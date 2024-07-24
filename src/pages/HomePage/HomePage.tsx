@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
 
     const fetchPosts = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/posts');
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/posts`);
             setPosts(response.data);
         } catch (error) {
             console.error("Error fetching posts", error);
@@ -36,7 +36,7 @@ const HomePage: React.FC = () => {
 
     const deletePost = async (id: string) => {
         try {
-            await axios.delete(`http://localhost:5000/api/posts/${id}`);
+            await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/posts/${id}`);
             setPosts(posts.filter(post => post._id !== id));
         } catch (error) {
             console.error("Error deleting post", error);
@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
         if (currentPost) {
             try {
                 const updatedPost = { title, description, image };
-                await axios.put(`http://localhost:5000/api/posts/${currentPost._id}`, updatedPost);
+                await axios.put(`${process.env.REACT_APP_BACKEND_URL}/api/posts/${currentPost._id}`, updatedPost);
                 fetchPosts(); // Refresh the posts list
                 setIsEditing(false);
                 setCurrentPost(null);
